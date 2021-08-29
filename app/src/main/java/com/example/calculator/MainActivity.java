@@ -14,7 +14,7 @@ import com.example.calculator.R;
 public class MainActivity extends AppCompatActivity {
     private EditText editText1, editText2;
     private TextView result;
-    private Button addbtn, subbtn, mulbtn, divbtn, modbtn;
+
     private String first, second;
     private  int f,s;
     private double total;
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button addbtn, subbtn, mulbtn, divbtn, modbtn;
         editText1 = findViewById(R.id.editTextNumber);
         editText2 = findViewById(R.id.editTextNumber2);
         result = findViewById(R.id.textView4);
@@ -78,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
                 second = editText2.getText().toString();
                 f = Integer.parseInt(first);
                 s = Integer.parseInt(second);
-                total = f / s;
-                result.setText(String.valueOf(total));
+                double divide = ((double)f/s);
+                result.setText(String.valueOf(divide));
             }
         });
 
